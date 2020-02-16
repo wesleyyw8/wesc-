@@ -19,14 +19,24 @@ namespace angulardemo.Controllers
         {
             _logger = logger;
         }
-
         
+        [HttpPost]
+        public Boolean Post([FromBody]string value)
+        {
+            System.Diagnostics.Debug.WriteLine("post!!!");
+            System.Diagnostics.Debug.WriteLine(value);
+            //var dbCon = DBConnect.Instance();
+            //if (dbCon.IsConnect())
+            //{
+            //    string query = "SELECT col0,col1 FROM YourTable";
+            //}
+            return true;
+        }
 
         [HttpGet]
         public IEnumerable<String> Get()
         {
             var dbCon = DBConnect.Instance();
-            dbCon.DatabaseName = "wes";
             System.Diagnostics.Debug.WriteLine("before is connect2!!");
             if (dbCon.IsConnect())
             {
