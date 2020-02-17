@@ -12,6 +12,9 @@ const routes: Routes = [{
   path: 'newsletter',
   component: NewsLetterComponent
 }, {
+  path: 'fetch',
+  component: FetchDataComponent
+}, {
   path: '', redirectTo: 'newsletter', pathMatch: 'full' ,
 }, {
   path: '**', redirectTo: 'newsletter'

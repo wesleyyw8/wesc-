@@ -27,7 +27,6 @@ export class NewsLetterComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      console.log('valid');
       this.dataService.postNewsLetterForm(form.value)
       .subscribe({
         next: () => this.onSaveComplete(),
